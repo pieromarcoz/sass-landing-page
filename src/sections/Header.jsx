@@ -45,6 +45,7 @@ export default function Header() {
                                         <img src={'/images/xora.svg'} height={55} width={160} alt={'logo'}/>
                                     </LinkScroll>
                                 </li>
+
                                 <li className={'nav-li'}>
                                     <NavLink tittle={'Home'}/>
                                     <div className={'dot'}/>
