@@ -1,5 +1,6 @@
 import {Link as LinkScroll} from 'react-scroll'
 import {useState} from "react";
+import clsx from "clsx";
 
 const NavLink = ({tittle}) => {
     return (
@@ -20,7 +21,9 @@ export default function Header() {
                     <img src={'/images/xora.svg'} height={55} alt={'logo'}/>
                 </a>
                 <div
-                    className={'w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0'}>
+                    className={clsx('w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0',
+                        isOpen ? 'max-lg:opacity-100' : 'max-lg:opacity-0',
+                    )}>
                     <div
                         className={'max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden ' +
                             'sidebar-before max-md:px-4'}>
@@ -32,7 +35,13 @@ export default function Header() {
                                     <NavLink tittle={'About'}/>
                                 </li>
                                 <li className={'nav-logo'}>
-                                    <LinkScroll>
+                                    <LinkScroll
+                                        to={"hero"}
+                                        offset={-100}
+                                        spy
+                                        smooth
+                                        className={'max-lg:hidden transition-transform duration-500 cursor-pointer'}
+                                    >
                                         <img src={'/images/xora.svg'} height={55} width={160} alt={'logo'}/>
                                     </LinkScroll>
                                 </li>
@@ -43,6 +52,11 @@ export default function Header() {
                                 </li>
                             </ul>
                         </nav>
+
+                        <div className={'lg:hidden block absolute top-1/2 left-0 w-[960px] h-[380px] translate-x-[-290px] -translate-y-1/2 rotate-90'}>
+                            <img src={'/images/bg-outlines.svg'} width={960} height={380} alt={'logo'} className={'relative z-2'}/>
+                            <img src={'/images/bg-outlines-fill.png'} width={960} height={380} alt={'logo'} className={'absolute inset-0 mix-blend-soft-light opacity-5'} />
+                        </div>
                     </div>
                 </div>
                 <button
