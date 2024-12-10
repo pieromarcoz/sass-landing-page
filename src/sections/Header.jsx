@@ -49,7 +49,7 @@ export default function Header() {
                                 <li className={'nav-li'}>
                                     <NavLink title={'Features'}/>
                                     <div className={'dot'}/>
-                                    <NavLink title={'About'}/>
+                                    <NavLink title={'Pricing'}/>
                                 </li>
                                 <li className={'nav-logo'}>
                                     <LinkScroll
@@ -63,9 +63,9 @@ export default function Header() {
                                     </LinkScroll>
                                 </li>
                                 <li className={'nav-li'}>
-                                    <NavLink title={'Home'}/>
+                                    <NavLink title={'FAQ'}/>
                                     <div className={'dot'}/>
-                                    <NavLink title={'About'}/>
+                                    <NavLink title={'DOWNLOAD'}/>
                                 </li>
                             </ul>
                         </nav>
