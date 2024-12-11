@@ -151,6 +151,8 @@
     .scroll-hide {
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
+         overflow-x: auto;  /* Fallback básico */
+    -webkit-overflow-scrolling: touch;
     }
 
     /* END of Common */
