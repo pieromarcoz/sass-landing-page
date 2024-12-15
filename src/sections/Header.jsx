@@ -63,7 +63,7 @@ export default function Header() {
                                     </LinkScroll>
                                 </li>
                                 <li className={'nav-li'}>
-                                    <NavLink title={'FAQ'}/>
+                                    <NavLink title={'Faq'}/>
                                     <div className={'dot'}/>
                                     <NavLink title={'DOWNLOAD'}/>
                                 </li>
